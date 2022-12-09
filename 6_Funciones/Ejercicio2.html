@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 2</title>
+  </head>
+
+  <body>
+    <script>
+      "use strict";
+
+      function precioTotal(precio, porcentajeImpuesto) {
+        if (precio > 100) {
+          precio = precio - precio * 0.1;
+        }
+        let precioFinal = precio + precio * (porcentajeImpuesto / 100);
+        return precioFinal;
+      }
+
+      let precio = parseFloat(prompt("Ingrese el precio en euros"));
+      let impuesto = parseFloat(prompt("Ingrese el porcentaje de impuesto"));
+
+      alert(`El valor total a pagar es ${precioTotal(precio, impuesto)} euros`);
+    </script>
+  </body>
+</html>

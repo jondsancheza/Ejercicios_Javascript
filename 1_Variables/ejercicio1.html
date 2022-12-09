@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 1</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+
+      let precio = parseFloat(prompt("Ingrese el precio del producto"));
+      let iva = parseFloat(prompt("Ingrese el valor del IVA"));
+
+      let precioFinal =
+        precio + (precio * iva) / 100 ||
+        "Los valores ingresados son incorrectos";
+      precioFinal
+        ? alert(`El precio final del producto es ${precioFinal}`)
+        : alert(precioFinal);
+    </script>
+  </body>
+</html>

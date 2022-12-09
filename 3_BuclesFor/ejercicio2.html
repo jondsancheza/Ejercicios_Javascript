@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio2</title>
+    <style>
+      div {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      p {
+        font-size: 100px;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p class="digIzquierda">0</p>
+      <p>:</p>
+      <p class="digDerecha">0</p>
+    </div>
+    <script>
+      "use strict";
+      const DIGITO1 = document.querySelector(".digIzquierda");
+      const DIGITO2 = document.querySelector(".digDerecha");
+
+      function mostrar(i, j) {
+        setTimeout(() => {
+          setTimeout(() => {
+            DIGITO1.innerHTML = i;
+            DIGITO2.innerHTML = j;
+          }, 1000 * j);
+        }, 5000 * i);
+      }
+      for (let i = 0; i < 2; i++) {
+        for (let j = 0; j < 5; j++) {
+          mostrar(i, j);
+        }
+      }
+    </script>
+  </body>
+</html>

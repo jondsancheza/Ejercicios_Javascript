@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio2</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      let eleccion;
+
+      do {
+        eleccion = parseInt(
+          prompt(`Ingrese la opción que desea beber para ser dirigido
+            * 1. Vino
+            * 2. Cerveza
+            * 3. Refresco
+            * 4. Agua`)
+        );
+
+        switch (eleccion) {
+          case 1:
+          case 2:
+            alert("Debe dirigirse a la barra");
+            break;
+          case 3:
+          case 4:
+            alert("Debe dirigirse a la tienda");
+            break;
+          default:
+            alert("La opción ingresada no es valida");
+        }
+      } while (eleccion > 4 || eleccion < 1 || isNaN(eleccion));
+    </script>
+  </body>
+</html>

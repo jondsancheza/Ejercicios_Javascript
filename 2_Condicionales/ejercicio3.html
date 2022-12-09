@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ejercicio3</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      let nota;
+      do {
+        nota = parseFloat(prompt("Ingrese una nota entre 0 y 10"));
+        if (nota >= 0 && nota < 5) alert(`Su nota es ${nota}: suspenso`);
+        else if (nota >= 5 && nota < 7) alert(`Su nota es ${nota}: aprobado`);
+        else if (nota >= 7 && nota < 9) alert(`Su nota es ${nota}: notable`);
+        else if (nota >= 9 && nota <= 10)
+          alert(`Su nota es ${nota}: sobresaliente`);
+        else
+          alert(
+            `La nota ingresada no es valida, recuerde que su nota debe estar entre 0 y 10`
+          );
+      } while (nota < 0 || nota > 10 || isNaN(nota));
+    </script>
+  </body>
+</html>

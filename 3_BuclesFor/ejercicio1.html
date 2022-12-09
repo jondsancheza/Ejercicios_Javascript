@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio1</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+
+      let letra = "";
+      let numero = 0;
+      let resultadoLetras = "";
+
+      do {
+        letra = prompt("Ingrese una letra");
+
+        if (letra.length === 1) {
+          numero = parseInt(prompt("Ingrese un número"));
+
+          for (let i = 0; i < numero; i++) {
+            resultadoLetras += letra;
+          }
+        } else {
+          alert("Usted no ingreso una unica letra, vuelva a intentar");
+        }
+      } while (letra.length !== 1);
+
+      alert(resultadoLetras);
+    </script>
+  </body>
+</html>
